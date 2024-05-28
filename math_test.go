@@ -1,11 +1,12 @@
 package main
 
-import "fmt"
+import "testing"
 
-func main() {
-	fmt.Println(soma(112, 10))
-}
+func TestSoma(t *testing.T) {
 
-func soma(a int, b int) int {
-	return a + b
+	total := soma(15, 15)
+
+	if total != 30 {
+		t.Errorf("Resultado da some é inválido: Resultado %d. Esperado: %d", total, 30)
+	}
 }
